@@ -1,0 +1,1 @@
+tạo schema tên `entries`, port `3306` và thêm 2 bảng `users` và `entries` vào schema.

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - AG Dict</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="logo">AG Dict</a>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Theme</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- register Section -->
+    <div class="register-wrapper">
+        <div class="register-container">
+            <h1 class="register-title">Register to AG Dict</h1>
+            
+            <form class="register-form" id="registerForm">
+                <div class="form-group">
+                    <label for="username" class="form-label">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        class="form-input" 
+                        placeholder="Enter your username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        class="form-input" 
+                        placeholder="Enter your name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        class="form-input" 
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="register-button">Đăng ký</button>
+            </form>
+
+            <div class="signup-prompt">
+                <p>Có tài khoản rồi? <a href="./login.html" class="signup-link">Đăng nhập ngay</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/login_register/register.js"></script>
+</body>
+</html>

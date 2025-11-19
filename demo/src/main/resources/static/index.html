@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="logo">AG Dict</a>
+            </div>
+            <div class="nav-right">
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Theme</a>
+                <a href="./login.html" class="nav-link">Log in</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header with Search -->
+    <header class="header">
+        <div class="header-container">
+            <h1 class="header-title">English Dictionary</h1>
+            <div class="search-container">
+                <form class="search-form" id="searchForm">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        id="searchInput"
+                        placeholder="Search for English"
+                        autocomplete="off"
+                    >
+                    <button type="submit" class="search-button">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Results Section (Hidden by default) -->
+    <main class="main-content" id="resultsSection" style="display: none;">
+        <div class="results-container" id="resultsContainer">
+            <!-- Result Item 1 -->
+            <!-- <div class="result-item">
+                <div class="word-section">
+                    <div class="word-main">
+                        <span class="word">ear</span>
+                        <span class="reading">/ɪər/</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag tag-common">Common word</span>
+                        <span class="tag tag-level">A1</span>
+                    </div>
+                </div>
+                <div class="meanings-section">
+                    <div class="meaning-group">
+                        <div class="pos">Verb</div>
+                        <ol class="definitions">
+                            <li>either of the two organs, one on each side of the head, by which people or animals hear sounds, or the piece of skin and tissue outside the head connected to this organ</li>
+                        </ol>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+    </main>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>

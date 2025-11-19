@@ -1,0 +1,268 @@
+/* Reset và Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f6f6f6;
+    color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: #5a9dc8;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #5a9dc8;
+}
+
+/* Header with Search */
+.header {
+    background: linear-gradient(135deg, #5a9dc8 0%, #4a8db8 100%);
+    padding: 60px 20px 80px;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header-title {
+    color: white;
+    font-size: 42px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+/* Search Container */
+.search-container {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.search-form {
+    position: relative;
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 16px 60px 16px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s;
+}
+
+.search-input:focus {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.search-button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s;
+}
+
+.search-button:hover {
+    color: #5a9dc8;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 900px;
+    margin: -40px auto 60px;
+    padding: 0 20px;
+}
+
+.results-container {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Result Item */
+.result-item {
+    padding: 28px 32px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+/* Word Section */
+.word-section {
+    margin-bottom: 16px;
+}
+
+.word-main {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.word {
+    font-size: 32px;
+    font-weight: 500;
+    color: #333;
+}
+
+.reading {
+    font-size: 18px;
+    color: #777;
+}
+
+.wordnotfound {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: #555;
+}
+
+.source-db {
+    font-size: 14px;
+    color: #f57d26;
+}
+
+.source-api {
+    font-size: 14px;
+    color: #35a77c;
+}
+
+/* Tags */
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.tag-common {
+    background-color: #f0f8ff;
+    color: #5a9dc8;
+}
+
+.tag-level {
+    background-color: #fff3e0;
+    color: #f57c00;
+}
+
+/* Meanings Section */
+.meanings-section {
+    margin-top: 16px;
+}
+
+.meaning-group {
+    margin-bottom: 16px;
+}
+
+.meaning-group:last-child {
+    margin-bottom: 0;
+}
+
+.pos {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.definitions {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.definitions li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.definitions li:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+    
+    .search-input {
+        font-size: 16px;
+        padding: 14px 50px 14px 16px;
+    }
+    
+    .kanji {
+        font-size: 28px;
+    }
+    
+    .reading {
+        font-size: 16px;
+    }
+    
+    .result-item {
+        padding: 20px 16px;
+    }
+}
