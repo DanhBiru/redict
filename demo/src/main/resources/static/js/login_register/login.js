@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const u = document.getElementById("username").value.trim();
         const p = document.getElementById("password").value.trim();
-        // if (v) document.getElementById("resultsSection").style.display = "block";
 
         // updateResultItems(v);
         loginHandling(u, p);
@@ -39,23 +38,6 @@ async function checkIfExistOrCorrectPassword(username, password) {
     } catch (error) {
         console.error(error.message);
         alert("Tài khoản không tồn tại :)")
-        return false;
-    }
-}
-
-async function checkIfCorrectPassword(username, password) {
-    const url = "http://localhost:8080/api/users/" + username;
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error(`Response status: ${response.status}`);
-        }
-
-        const results = await response.json();
-        console.log(results);
-        return true;
-    } catch (error) {
-        console.error(error.message);
         return false;
     }
 }

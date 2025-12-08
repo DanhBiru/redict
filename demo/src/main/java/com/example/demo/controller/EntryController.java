@@ -8,7 +8,7 @@ import com.example.demo.repo.EntryRepo;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/entries")
+@RequestMapping("/api/entries/debug")
 public class EntryController {
     private final EntryRepo repo;
 
@@ -16,7 +16,7 @@ public class EntryController {
         this.repo = repo;
     }
     
-    // @CrossOrigin(origins = "http://127.0.0.1:5500")
+    @CrossOrigin(origins = "http://127.0.0.1:8080")
     @GetMapping("/{word}")
     public List<Entry> get(@PathVariable String word) {
         return repo.findByWord(word);

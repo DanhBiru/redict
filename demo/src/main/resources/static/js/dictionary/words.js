@@ -7,7 +7,7 @@ async function getWordLocalDatabase(word) {
         }
 
         const results = await response.json();
-        console.log(results);
+        // console.log(results);
         return results;
     } catch (error) {
         console.error(error.message);
@@ -35,8 +35,11 @@ async function getWordDictionaryAPI(word) {
 
 async function getResult(word) {
     word = word.toLowerCase();
+    // word[0] = word[0].toUpperCase();
     const results_localdatabase = await getWordLocalDatabase(word); 
-    // console.log(results_localdatabase);
+    console.log(results_localdatabase);
+    console.log(results_localdatabase.word_type);
+    console.log(results_localdatabase.definition);
     const results_dictionaryapi = await getWordDictionaryAPI(word);
     // console.log(results_dictionaryapi);
 
@@ -48,9 +51,9 @@ async function getResult(word) {
 
     if (results_localdatabase != undefined) {
 
-        for (let i = 0; i < results_localdatabase.length; i++) {
-            let result = results_localdatabase[i];
-            let word = result.word.toLowerCase();
+        // for (let i = 0; i < results_localdatabase.length; i++) {
+        for (let i = 0; i < 1; i++) {
+            let result = results_localdatabase;
             word_type = result.wordtype;
             let definition = result.definition;
 
